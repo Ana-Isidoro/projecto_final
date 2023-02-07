@@ -1,0 +1,30 @@
+.search_bar_image {
+  width: 12px;
+  margin-right: 12px;
+}
+
+.search_bar_container {
+  background-color: lightgrey;
+  padding: 10px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search_bar_input {
+  background-color: lightgrey;
+  border: none;
+}
+.search_bar_input:focus {
+  outline: none;
+  border: none;
+}
+
+.search_bar_button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+}
