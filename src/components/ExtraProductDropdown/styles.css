@@ -1,0 +1,38 @@
+.extraProductDropDown_container {
+  width: 80%;
+}
+
+.extraProductDropDown_section {
+  background-color: lightgray;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.extraProductDropDown_text {
+  font-weight: bold;
+}
+
+.extraProductDropDown_Arrow {
+  width: 15px;
+  height: 15px;
+  border: 1px solid grey;
+  border-radius: 50px;
+  background-color: white;
+  padding: 5px;
+}
+
+.extraProductDropDown_iconMore {
+  border-radius: 50%;
+  background-color: lightgray;
+  font-weight: bold;
+  padding: 5px 8px;
+  margin-right: 10px;
+  border: 1px solid grey;
+}
+
+.extraProductDropDown_sectionMore {
+  margin: 15px;
+}

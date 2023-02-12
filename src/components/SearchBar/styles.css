@@ -1,9 +1,9 @@
-.search_bar_image {
+.searchBar_image {
   width: 12px;
   margin-right: 12px;
 }
 
-.search_bar_container {
+.searchBar_container {
   background-color: lightgrey;
   padding: 10px;
   width: 350px;
@@ -11,16 +11,16 @@
   justify-content: space-between;
 }
 
-.search_bar_input {
+.searchBar_input {
   background-color: lightgrey;
   border: none;
 }
-.search_bar_input:focus {
+.searchBar_input:focus {
   outline: none;
   border: none;
 }
 
-.search_bar_button {
+.searchBar_button {
   background: none;
   color: inherit;
   border: none;

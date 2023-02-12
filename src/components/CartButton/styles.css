@@ -1,0 +1,19 @@
+.cartButton_container {
+  background-color: black;
+  border-radius: 50px;
+  width: 150px;
+  padding: 13px 0px;
+  height: 30px;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.cartButton_text {
+  color: white;
+}
+
+.cartButton_icon {
+  width: 20px;
+  margin: 15px;
+}

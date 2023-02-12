@@ -1,0 +1,13 @@
+.productCard_image {
+  width: 200px;
+  height: 200px;
+}
+
+.title {
+  font-weight: bold;
+  margin: 2px;
+}
+
+.price {
+  margin: 2px;
+}
