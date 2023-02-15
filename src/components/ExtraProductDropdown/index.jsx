@@ -34,13 +34,13 @@ function ExtraProductDropDown(props) {
       </div>
       {isOpen && (
         <div>
-          {extras.map((value) => {
+          {extras.map((item) => {
             return (
               <div className="extraProductDropDown_sectionMore">
                 <button className="extraProductDropDown_iconMore">
                   +
                 </button>
-                <span>{value}</span>
+                <span>{item}</span>
               </div>
             );
           })}

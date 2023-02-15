@@ -3,11 +3,15 @@
   height: 200px;
 }
 
-.title {
+.productCard_title {
   font-weight: bold;
   margin: 2px;
 }
 
-.price {
+.productCard_price {
   margin: 2px;
+}
+
+.productCard_container {
+  margin-bottom: 20px;
 }

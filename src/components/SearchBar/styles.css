@@ -1,14 +1,17 @@
 .searchBar_image {
   width: 12px;
   margin-right: 12px;
+  height: 12px;
+  align-self: center;
 }
 
 .searchBar_container {
   background-color: lightgrey;
   padding: 10px;
-  width: 350px;
+  width: 400px;
   display: flex;
   justify-content: space-between;
+  height: 35px;
 }
 
 .searchBar_input {
@@ -27,4 +30,9 @@
   padding: 0;
   cursor: pointer;
   outline: inherit;
+}
+
+.searchBar_input_container {
+  display: flex;
+  justify-content: center;
 }

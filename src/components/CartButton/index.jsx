@@ -17,11 +17,9 @@ const CartButton = (props) => {
         className="cartButton_icon"
         alt="cart"
       />
-      {!props.hideText && (
-        <div className="cartButton_text">
-          Carrinho ● {props.cartItemsQuantity || 0}
-        </div>
-      )}
+      <div className="cartButton_text">
+        Carrinho ● {props.cartItemsQuantity || 0}
+      </div>
     </button>
   );
 };

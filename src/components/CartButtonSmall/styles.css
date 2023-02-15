@@ -1,0 +1,11 @@
+.cartButtonSmall_container {
+  background-color: black;
+  border-radius: 50px;
+  width: 50px;
+  padding: 5px;
+  height: 50px;
+}
+
+.cartButtonSmall_icon {
+  width: 20px;
+}

@@ -1,10 +1,11 @@
 import React from 'react';
 import './styles.css';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+  console.log(props.children);
   return (
     <div className="searchBar_container">
-      <div>
+      <div className="searchBar_input_container">
         <img
           src={require('../../images/search_icon.png')}
           className="searchBar_image"
