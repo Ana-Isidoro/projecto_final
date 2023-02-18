@@ -13,11 +13,13 @@ const Home = () => {
       name: 'Hamburger',
       price: 3.99,
       img,
+      extras: ['água', 'sumo'],
     },
     {
       name: 'Pizza',
       price: 9.99,
       img,
+      extras: ['extra queijo', 'sumo'],
     },
     {
       name: 'Tacos',
@@ -25,7 +27,7 @@ const Home = () => {
       img,
     },
     {
-      name: 'Salada',
+      name: 'Salad',
       price: 5.99,
       img,
     },
@@ -53,7 +55,7 @@ const Home = () => {
   return (
     <div className="home_container">
       <div className="home_header">
-        <SearchBar></SearchBar>
+        <SearchBar />
         <CartButton />
       </div>
       <div className="home_products_container">

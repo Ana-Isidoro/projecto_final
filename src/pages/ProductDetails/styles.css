@@ -1,0 +1,16 @@
+.productDetails_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productDetails_image {
+  width: 100%;
+  height: 500px;
+  margin-top: 40px;
+}
+
+.productDetails_cartButtonSmall {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}

@@ -20,7 +20,7 @@ function ExtraProductDropDown(props) {
         className="extraProductDropDown_section"
         onClick={onClickHandler}
       >
-        <div>
+        <div className="extraProductDropDown_textContainer">
           <div className="extraProductDropDown_text">Deseja um extra?</div>
           <div className="extraProductDropDown_subText">
             Escolha até 50

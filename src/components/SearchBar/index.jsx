@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './styles.css';
 
-const SearchBar = (props) => {
-  console.log(props.children);
+const SearchBar = () => {
+  const [value, setValue] = useState('');
+
   return (
     <div className="searchBar_container">
       <div className="searchBar_input_container">
@@ -12,12 +13,21 @@ const SearchBar = (props) => {
           alt="Search"
         />
         <input
+          value={value}
           type="text"
           className="searchBar_input"
           placeholder="Affordable Meals"
+          onChange={(event) => {
+            setValue(event.target.value);
+          }}
         />
       </div>
-      <button className="searchBar_button" onClick={() => alert('test')}>
+      <button
+        className="searchBar_button"
+        onClick={() => {
+          setValue('');
+        }}
+      >
         Limpar
       </button>
     </div>
