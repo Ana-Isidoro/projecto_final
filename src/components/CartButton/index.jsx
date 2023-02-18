@@ -2,11 +2,6 @@ import React from 'react';
 import './styles.css';
 
 const CartButton = (props) => {
-  const str1 = 'abc';
-  const str2 = 'abc';
-  const str3 = `abc ${!props.hideText ? 'blbla' : ''}`;
-  const str4 = `abc ${!props.hideText && 'blbla'}`;
-
   return (
     <button
       className="cartButton_container"

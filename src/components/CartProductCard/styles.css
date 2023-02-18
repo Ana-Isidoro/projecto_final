@@ -1,0 +1,36 @@
+.cartProductCard_image {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.cartProductCard_container {
+  display: flex;
+  width: 100%;
+}
+
+.cartProductCard_total {
+  position: relative;
+  font-weight: bold;
+  color: darkred;
+  right: 0;
+  margin: 10px;
+}
+
+.cartProductCard_itemInfo {
+  width: 100%;
+}
+
+.cartProductCard_input {
+  width: 45px;
+  margin-right: 10px;
+}
+
+.cartProductCard_remove {
+  background: none;
+  color: darkred;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+}
