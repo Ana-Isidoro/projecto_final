@@ -10,6 +10,8 @@ const CartCheckout = () => {
   const [cardMonth, setCardMonth] = useState('');
   const [cardYear, setCardYear] = useState(null);
 
+  console.log(cardMonth);
+
   const months = [
     {monthName: 'Janeiro', code: 'Jan'},
     {monthName: 'Fevereiro', code: 'Feb'},
@@ -25,29 +27,11 @@ const CartCheckout = () => {
     {monthName: 'Dezembro', code: 'Dec'},
   ];
 
-  const meses = [
-    'Janeiro',
-    'Fevereiro',
-    'Março',
-    'Abril',
-    'Maio',
-    'Junho',
-    'Julho',
-    'Agosto',
-    'Setembro',
-    'Outubro',
-    'Novembro',
-    'Dezembro',
-  ];
-  //TODO: falta ver o mês actual e mostrar apenas a partir desse mês
-
   const getYearsArray = (startYear, finalYear) => {
     const years = [];
     const numberOfYears = finalYear - startYear;
-    console.log(numberOfYears);
 
     for (let i = 0; i < numberOfYears; i++) {
-      console.log(startYear + i);
       years.push(startYear + i);
     }
     return years;
@@ -76,50 +60,59 @@ const CartCheckout = () => {
       />
       <p>Número do cartão</p>
       <input
+        className="cartCheckout_cardNumber"
         value={cardNumber}
         type="number"
-        min="1111111111111111"
+        min="1000000000000000"
         max="9999999999999999"
         onChange={(event) => {
           setCardNumber(event.target.value);
         }}
       />
-      <p>Código de Segurança</p>
-      <input
-        className="cartCheckout_securityNumber"
-        type="number"
-        min="100"
-        max="999"
-        value={securityNumber}
-        onChange={(event) => {
-          setSecurityNumber(event.target.value);
-        }}
-      />
-      <p>Válido até</p>
-      <select
-        name="month"
-        value={cardMonth}
-        onChange={(event) => {
-          setCardMonth(event.target.value);
-        }}
-      >
-        <option value="">--</option>
-        {meses.map((month) => (
-          <option value={month}>{month}</option>
-        ))}
-      </select>
-      <select
-        name="year"
-        value={cardYear}
-        onChange={(event) => {
-          setCardYear(event.target.value);
-        }}
-      >
-        <option value={null}>--</option>
-        {years.map((year) => (
-          <option value={year}>{year}</option>
-        ))}
-      </select>
+
+      <div className="cartCheckout_cardInfo">
+        <div>
+          <p>Código de Segurança</p>
+          <input
+            className="cartCheckout_securityNumber"
+            type="number"
+            min="100"
+            max="999"
+            value={securityNumber}
+            onChange={(event) => {
+              setSecurityNumber(event.target.value);
+            }}
+          />
+        </div>
+
+        <div>
+          <p>Válido até</p>
+          <select
+            name="month"
+            value={cardMonth}
+            onChange={(event) => {
+              setCardMonth(event.target.value);
+            }}
+          >
+            <option value="">--</option>
+            {months.map((value) => (
+              <option value={value.code}>{value.monthName}</option>
+            ))}
+          </select>
+          <select
+            name="year"
+            value={cardYear}
+            onChange={(event) => {
+              setCardYear(event.target.value);
+            }}
+          >
+            <option value={null}>--</option>
+            {years.map((year) => (
+              <option value={year}>{year}</option>
+            ))}
+          </select>
+        </div>
+      </div>
     </div>
   );
 };

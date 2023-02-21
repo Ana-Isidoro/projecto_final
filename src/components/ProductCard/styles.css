@@ -14,4 +14,19 @@
 
 .productCard_container {
   margin-bottom: 20px;
+  position: relative;
+  width: 200px;
+}
+
+.productCard_buttonAdd {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  border: solid 1px white;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }

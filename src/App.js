@@ -4,11 +4,14 @@ import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
 import CartCheckout from './pages/CartCheckout';
 import './App.css';
+import ProductCard from './components/ProductCard';
+import Contacts from './pages/Contacts';
 
 function App() {
+  const image = require('./images/food/salade.jpg');
   return (
     <div className="app_container">
-      <CartCheckout />
+      <Contacts />
     </div>
   );
 }
