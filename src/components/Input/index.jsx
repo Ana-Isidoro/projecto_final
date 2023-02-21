@@ -7,6 +7,7 @@ const Input = (props) => {
       className="input_container"
       value={props.value}
       type={props.number}
+      placeholder={props.placeholder}
       id={props.id}
       name={props.name}
       min={props.min}
