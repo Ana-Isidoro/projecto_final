@@ -1,0 +1,34 @@
+.contacts_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts_ClientInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts_nameEmail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts_name {
+  width: 45%;
+}
+
+.contacts_email {
+  width: 45%;
+  margin-bottom: 15px;
+}
+
+.contacts_subject {
+  width: inherit;
+  margin-bottom: 15px;
+}
+
+.contacts_message {
+  width: inherit;
+  height: 150px;
+  margin-bottom: 15px;
+}
