@@ -6,50 +6,49 @@ import ExtraProductDropDown from '../../components/ExtraProductDropdown';
 import CartButtonSmall from '../../components/CartButtonSmall';
 import './styles.css';
 
-const Home = () => {
-  const img = require('../../images/food/salade.jpg');
+const ProductList = () => {
   const products = [
     {
       name: 'Hamburger',
       price: 3.99,
-      img,
+      img: 'https://res.cloudinary.com/dxqc90trp/image/upload/v1677328401/hamburguer_pf9ujw.jpg',
       extras: ['água', 'sumo'],
     },
     {
       name: 'Pizza',
       price: 9.99,
-      img,
+      img: 'https://res.cloudinary.com/dxqc90trp/image/upload/c_fill,h_200,w_200/v1677328401/pizza_ytzmfe.jpg',
       extras: ['extra queijo', 'sumo'],
     },
     {
       name: 'Tacos',
       price: 7.99,
-      img,
+      img: 'https://res.cloudinary.com/dxqc90trp/image/upload/c_fill,h_200,w_200/v1677329169/tacos_cegfnq.png',
     },
     {
       name: 'Salad',
       price: 5.99,
-      img,
+      img: 'https://res.cloudinary.com/dxqc90trp/image/upload/v1677328401/salade_oa868l.jpg',
     },
     {
       name: 'Fried Chicken',
       price: 8.99,
-      img,
+      img: 'https://res.cloudinary.com/dxqc90trp/image/upload/v1677328393/friedChiken_ry08ua.png',
     },
     {
       name: 'Sushi',
       price: 12.99,
-      img,
+      img: 'https://res.cloudinary.com/dxqc90trp/image/upload/c_fill,h_200,w_200/v1677328401/sushi_xlwvbt.png',
     },
     {
       name: 'Steak',
       price: 19.99,
-      img,
+      img: 'https://res.cloudinary.com/dxqc90trp/image/upload/c_fill,h_200,w_200/v1677328401/steak_ojpohg.png',
     },
     {
       name: 'Pasta',
       price: 11.99,
-      img,
+      img: 'https://res.cloudinary.com/dxqc90trp/image/upload/c_fill,h_200,w_200/v1677328401/pasta_zypsxy.png',
     },
   ];
   return (
@@ -71,4 +70,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default ProductList;

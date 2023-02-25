@@ -1,18 +1,13 @@
 import React, {useState} from 'react';
 import './styles.css';
 
-const CartProductCard = ({price, title}) => {
-  const productImage = require('../../images/food/salade.jpg');
+const CartProductCard = ({price, title, image}) => {
   const [value, setValue] = useState(100);
   const priceWithQuantity = price * value;
 
   return (
     <div className="cartProductCard_container">
-      <img
-        src={productImage}
-        className="cartProductCard_image"
-        alt="product"
-      />
+      <img src={image} className="cartProductCard_image" alt="product" />
       <div>
         <h2>{title}</h2>
         <div className="cartProductCard_itemInfo">

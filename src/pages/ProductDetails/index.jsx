@@ -6,8 +6,6 @@ import CartButtonSmall from '../../components/CartButtonSmall';
 import './styles.css';
 
 const ProductDetails = (props) => {
-  const productImage = require('../../images/food/salade.jpg');
-
   return (
     <div>
       <div className="productDetails_header">
@@ -16,7 +14,7 @@ const ProductDetails = (props) => {
       </div>
       <div>
         <img
-          src={productImage}
+          src={props.image}
           className="productDetails_image"
           alt="product"
         />
