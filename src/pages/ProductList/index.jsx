@@ -50,6 +50,11 @@ const ProductList = () => {
       price: 11.99,
       img: 'https://res.cloudinary.com/dxqc90trp/image/upload/c_fill,h_200,w_200/v1677328401/pasta_zypsxy.png',
     },
+    {
+      name: 'Fish',
+      price: 17.99,
+      img: 'https://res.cloudinary.com/dxqc90trp/image/upload/v1678234608/fish-mappas-1-a2f0235_vibpio.webp',
+    },
   ];
   return (
     <div className="home_container">

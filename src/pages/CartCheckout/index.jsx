@@ -10,8 +10,6 @@ const CartCheckout = () => {
   const [cardMonth, setCardMonth] = useState('');
   const [cardYear, setCardYear] = useState(null);
 
-  console.log(cardMonth);
-
   const months = [
     {monthName: 'Janeiro', code: 'Jan'},
     {monthName: 'Fevereiro', code: 'Feb'},

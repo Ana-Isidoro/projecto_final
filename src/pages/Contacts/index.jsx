@@ -41,8 +41,7 @@ const Contacts = () => {
     setSubject('');
     setMessage('');
   };
-
-  console.log(restaurantInfo);
+  // verificar se todos os campos estão preenchidos antes de enviar e apagar a informação
 
   return (
     <div className="contacts_container">
