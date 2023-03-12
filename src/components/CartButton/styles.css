@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+.cartButton_link {
+  text-decoration: none;
+}
+
 .cartButton_text {
   color: white;
 }

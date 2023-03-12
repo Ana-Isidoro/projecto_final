@@ -1,4 +1,4 @@
-import React from 'react';
+import {Link} from 'react-router-dom';
 import './styles.css';
 
 const CartTotal = (props) => {
@@ -6,9 +6,13 @@ const CartTotal = (props) => {
     <div className="cartTotal_container">
       <p className="cartTotal_info">
         Total ({props.quantity} items):{' '}
-        <span className="cartTotal_price">{props.price}€ </span>
+        <span className="cartTotal_price">
+          {props.price?.toFixed(2)}€{' '}
+        </span>
       </p>
-      <p className="cartTotal_checkout">Proceed to checkout</p>
+      <Link to="/cart-checkout" className="cartTotal_checkout">
+        Ir para o checkout
+      </Link>
     </div>
   );
 };

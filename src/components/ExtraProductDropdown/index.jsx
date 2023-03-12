@@ -4,8 +4,6 @@ import './styles.css';
 function ExtraProductDropDown(props) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const extras = ['Sumo Laranja Natural', 'Água', 'Coca-cola'];
-
   const onClickHandler = () => {
     if (isOpen) {
       setIsOpen(false);
@@ -22,9 +20,6 @@ function ExtraProductDropDown(props) {
       >
         <div className="extraProductDropDown_textContainer">
           <div className="extraProductDropDown_text">Deseja um extra?</div>
-          <div className="extraProductDropDown_subText">
-            Escolha até 50
-          </div>
         </div>
         <img
           src={require('../../images/arrow_icon.png')}
@@ -34,10 +29,13 @@ function ExtraProductDropDown(props) {
       </div>
       {isOpen && (
         <div>
-          {extras.map((item) => {
+          {props.extras.map((item) => {
             return (
               <div className="extraProductDropDown_sectionMore">
-                <button className="extraProductDropDown_iconMore">
+                <button
+                  className="extraProductDropDown_iconMore"
+                  onClick={() => props.onAddExtra(item)}
+                >
                   +
                 </button>
                 <span>{item}</span>
