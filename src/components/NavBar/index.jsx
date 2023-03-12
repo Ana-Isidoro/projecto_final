@@ -20,7 +20,7 @@ const NavBar = () => {
       <ul className="nav_bar_list">
         <li>
           <Link className="nav_bar_listItem" to="/product-list">
-            Menu
+            Encomendar
           </Link>
         </li>
         <li>

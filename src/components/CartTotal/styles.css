@@ -2,6 +2,7 @@
   background-color: rgb(235, 232, 232);
   padding: 10px 25px;
   width: 350px;
+  height: 100px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -16,6 +17,8 @@
   width: 300px;
   cursor: pointer;
   outline: inherit;
+  text-decoration: none;
+  color: black;
 }
 
 .cartTotal_info {

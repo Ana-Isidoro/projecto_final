@@ -10,6 +10,8 @@ const CartCheckout = () => {
   const [cardMonth, setCardMonth] = useState('');
   const [cardYear, setCardYear] = useState(null);
 
+  const [done, setDone] = useState(null);
+
   const months = [
     {monthName: 'Janeiro', code: 'Jan'},
     {monthName: 'Fevereiro', code: 'Feb'},
@@ -38,7 +40,23 @@ const CartCheckout = () => {
   const currentYear = new Date().getFullYear();
   const years = getYearsArray(currentYear, currentYear + 100);
 
-  return (
+  const handleCheckout = () => {
+    if (
+      name &&
+      address &&
+      cardMonth &&
+      cardYear &&
+      cardNumber &&
+      securityNumber
+    ) {
+      setDone('done');
+      localStorage.removeItem('cart');
+    } else {
+      alert('Por favor preencha todos os campos');
+    }
+  };
+
+  return !done ? (
     <div>
       <p>Nome</p>
       <Input
@@ -111,7 +129,13 @@ const CartCheckout = () => {
           </select>
         </div>
       </div>
+      <br></br>
+      <button className="checkout_button" onClick={handleCheckout}>
+        Encomendar
+      </button>
     </div>
+  ) : (
+    <h3>Obrigado pela sua encomenda!</h3>
   );
 };
 

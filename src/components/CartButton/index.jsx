@@ -4,7 +4,7 @@ import './styles.css';
 
 const CartButton = (props) => {
   return (
-    <Link to="/cart">
+    <Link to="/cart" className="cartButton_link">
       <button className="cartButton_container">
         <img
           src={require('../../images/cart_icon.png')}

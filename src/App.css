@@ -1,3 +1,5 @@
 .app_container {
-  padding: 10% 32%;
+  margin: auto;
+  padding: 8em 0;
+  max-width: 50em;
 }

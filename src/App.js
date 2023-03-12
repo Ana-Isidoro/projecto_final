@@ -5,8 +5,13 @@ import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
 import CartCheckout from './pages/CartCheckout';
 import Contacts from './pages/Contacts';
+import Reservations from './pages/Reservations';
 import NavBar from './components/NavBar';
 import './App.css';
+
+const PageWrapper = ({children}) => {
+  return <div className="app_container">{children}</div>;
+};
 
 function App() {
   return (
@@ -17,15 +22,56 @@ function App() {
           <Route path="/" element={<HomePage />} />
         </Routes>
       </div>
-      <div className="app_container">
-        <Routes>
-          <Route path="/product-list" element={<ProductList />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/cart-checkout" element={<CartCheckout />} />
-          <Route path="/test" element={<CartCheckout />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route
+          path="/product-list"
+          element={
+            <PageWrapper>
+              <ProductList />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/product-details"
+          element={
+            <PageWrapper>
+              <ProductDetails />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/contacts"
+          element={
+            <PageWrapper>
+              <Contacts />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/cart-checkout"
+          element={
+            <PageWrapper>
+              <CartCheckout />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <PageWrapper>
+              <Cart />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/reservations"
+          element={
+            <PageWrapper>
+              <Reservations />
+            </PageWrapper>
+          }
+        />
+      </Routes>
     </BrowserRouter>
   );
 }

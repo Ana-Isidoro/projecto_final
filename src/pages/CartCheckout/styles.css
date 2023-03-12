@@ -15,3 +15,12 @@
   justify-content: space-between;
   width: 400px;
 }
+
+.checkout_button {
+  margin-top: 50px;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}

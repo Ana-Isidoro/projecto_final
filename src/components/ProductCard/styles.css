@@ -18,6 +18,11 @@
   width: 200px;
 }
 
+.productCard_link {
+  text-decoration: none;
+  color: black;
+}
+
 .productCard_buttonAdd {
   border-radius: 50%;
   width: 25px;

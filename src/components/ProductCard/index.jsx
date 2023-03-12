@@ -1,44 +1,24 @@
-import React from 'react';
+import {Link} from 'react-router-dom';
 import './styles.css';
 
-const ProductCard = (props) => {
-  const addItemToCart = async () => {
-    const cart = window.localStorage.getItem('cart');
-    if (cart) {
-      const cartItems = JSON.parse(cart);
-      const itemIndex = cartItems.findIndex(
-        (item) => item.title === props.title
-      );
-
-      if (itemIndex !== -1) {
-        cartItems[itemIndex].quantity = cartItems[itemIndex].quantity + 1;
-        const newCartItems = JSON.stringify(cartItems);
-        window.localStorage.setItem('cart', newCartItems);
-      } else {
-        const newItem = {
-          title: props.title,
-          price: props.price,
-          quantity: 1,
-        };
-        const newCartItems = JSON.stringify([...cartItems, newItem]);
-        window.localStorage.setItem('cart', newCartItems);
-      }
-    } else {
-      const item = JSON.stringify([
-        {title: props.title, price: props.price, quantity: 1},
-      ]);
-      window.localStorage.setItem('cart', item);
-    }
-  };
-
+const ProductCard = ({title, price, image, extras, onAddItem}) => {
   return (
     <div className="productCard_container">
-      <span className="productCard_buttonAdd" onClick={addItemToCart}>
+      <span
+        className="productCard_buttonAdd"
+        onClick={() => onAddItem({title, image, price})}
+      >
         +
       </span>
-      <img src={props.image} className="productCard_image" alt="product" />
-      <p className="productCard_title">{props.title}</p>
-      <p className="productCard_price">{props.price}€</p>
+      <Link
+        className="productCard_link"
+        to="/product-details"
+        state={{title, price, image, extras}}
+      >
+        <img src={image} className="productCard_image" alt="product" />
+        <p className="productCard_title">{title}</p>
+        <p className="productCard_price">{price?.toFixed(2)}€</p>
+      </Link>
     </div>
   );
 };
